@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Account | Basant Bazaar</title>
+
+  <style>
+    :root {
+      --green: #0f6b4f;
+      --dark-green: #094833;
+      --gold: #e7a319;
+      --bg: #f5f7f6;
+      --white: #ffffff;
+      --text: #1c2622;
+      --muted: #5f6d66;
+      --border: #dbe4df;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    .header {
+      background: linear-gradient(135deg, var(--dark-green), var(--green));
+      color: white;
+      text-align: center;
+      padding: 42px 20px 55px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 34px;
+    }
+
+    .header p {
+      margin: 8px 0 0;
+      color: #e4f4ec;
+      font-size: 17px;
+    }
+
+    .container {
+      width: min(900px, calc(100% - 32px));
+      margin: -24px auto 40px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 24px rgba(18, 48, 35, 0.08);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--dark-green);
+      font-size: 23px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .notice {
+      background: #fff8e8;
+      border-left: 5px solid var(--gold);
+      border-radius: 8px;
+      color: #5d4713;
+      padding: 14px 16px;
+    }
+
+    label {
+      display: block;
+      margin: 16px 0 7px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #b8c7bf;
+      border-radius: 9px;
+      font: inherit;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(15, 107, 79, 0.14);
+    }
+
+    textarea {
+      height: 105px;
+      resize: vertical;
+    }
+
+    .check-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .check-row input {
+      width: 18px;
+      height: 18px;
+      margin-top: 4px;
+    }
+
+    .check-row label {
+      margin: 0;
+      font-weight: normal;
+    }
+
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 9px;
+      padding: 14px;
+      margin-top: 20px;
+      background: var(--green);
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: var(--dark-green);
+    }
+
+    .message {
+      display: none;
+      margin-top: 16px;
+      padding: 14px;
+      border-radius: 9px;
+      background: #e5f6eb;
+      border: 1px solid #9ed6ae;
+      color: #157347;
+    }
+
+    .support {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 18px;
+    }
+
+    footer {
+      padding: 6px 20px 30px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 20px;
+      }
+
+      .header h1 {
+        font-size: 29px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <h1>Basant Bazaar</h1>
+    <p>Account and data deletion request</p>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Request account deletion</h2>
+
+      <p>
+        You can request deletion of your Basant Bazaar account and associated
+        personal data by completing the form below.
+      </p>
+
+      <div class="notice">
+        <strong>Important:</strong> After your account is deleted, you may lose
+        access to your profile, saved addresses, listings, order history, and
+        other account-related features.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>How to request deletion</h2>
+
+      <ol>
+        <li>Enter the mobile number registered with your Basant Bazaar account.</li>
+        <li>Enter your full name and email address, if available.</li>
+        <li>Submit the account deletion request.</li>
+        <li>We may contact you to verify account ownership.</li>
+        <li>Requests are normally processed within 30 days after verification.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Data deleted</h2>
+
+      <ul>
+        <li>Basant Bazaar account and profile information</li>
+        <li>Registered phone number, name, and contact information</li>
+        <li>Saved delivery addresses</li>
+        <li>Seller or manufacturer profile details, where applicable</li>
+        <li>Product listings and uploaded product images, where applicable</li>
+        <li>CNIC and licence details, where applicable</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Data that may be retained</h2>
+
+      <p>
+        Limited order, transaction, security, fraud-prevention, dispute, and
+        legal-compliance records may be retained only where necessary.
+      </p>
+
+      <p>
+        Such records are securely stored and are not used for marketing.
+        Account deletion requests are normally completed within 30 days after
+        account ownership verification.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Submit deletion request</h2>
+
+      <form id="deleteForm">
+
+        <label for="name">Full name *</label>
+        <input
+          id="name"
+          type="text"
+          required
+          placeholder="Enter your full name"
+        >
+
+        <label for="phone">Registered mobile number *</label>
+        <input
+          id="phone"
+          type="tel"
+          required
+          placeholder="+92 3XX XXXXXXX"
+        >
+
+        <label for="email">Email address (optional)</label>
+        <input
+          id="email"
+          type="email"
+          placeholder="Enter your email address"
+        >
+
+        <label for="reason">Reason for deletion (optional)</label>
+
+        <textarea
+          id="reason"
+          placeholder="You may write your reason here"
+        ></textarea>
+
+        <div class="check-row">
+
+          <input
+            id="confirm"
+            type="checkbox"
+            required
+          >
+
+          <label for="confirm">
+            I confirm that I am requesting deletion of my Basant Bazaar account
+            and understand that my account-related data may be permanently deleted.
+          </label>
+
+        </div>
+
+        <button type="submit">
+          Submit deletion request
+        </button>
+
+        <div class="message" id="message">
+          Demo preview: Your request would be submitted here after Firebase is connected.
+        </div>
+
+      </form>
+
+      <p class="support">
+        If you cannot use this form, contact:
+        <strong>mobile.appdevu@gmail.com</strong>
+      </p>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Basant Bazaar · Privacy Policy
+  </footer>
+
+  <script>
+    const form = document.getElementById("deleteForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", function (event) {
+
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      message.style.display = "block";
+
+      form.reset();
+
+    });
+  </script>
+
+</body>
+</html>
