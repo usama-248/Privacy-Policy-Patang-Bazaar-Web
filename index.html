@@ -1,337 +1,545 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delete Account | Basant Bazaar</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy Policy | Basant Bazaar</title>
+
+  <meta
+    name="description"
+    content="Privacy Policy for the Basant Bazaar mobile application."
+  />
 
   <style>
     :root {
-      --green: #0f6b4f;
-      --dark-green: #094833;
+      --primary: #0f6b4f;
+      --primary-dark: #094833;
       --gold: #e7a319;
-      --bg: #f5f7f6;
-      --white: #ffffff;
+      --background: #f5f7f6;
+      --surface: #ffffff;
       --text: #1c2622;
       --muted: #5f6d66;
       --border: #dbe4df;
+      --link: #0b654a;
+      --notice-background: #fff8e8;
+      --notice-text: #5d4713;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
       color: var(--text);
-      background: var(--bg);
-      line-height: 1.6;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
     }
 
     .header {
-      background: linear-gradient(135deg, var(--dark-green), var(--green));
-      color: white;
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: #ffffff;
+      padding: 42px 20px 52px;
       text-align: center;
-      padding: 42px 20px 55px;
     }
 
-    .header h1 {
+    .brand {
       margin: 0;
       font-size: 34px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
     }
 
-    .header p {
+    .subtitle {
       margin: 8px 0 0;
       color: #e4f4ec;
-      font-size: 17px;
+      font-size: 16px;
     }
 
     .container {
-      width: min(900px, calc(100% - 32px));
-      margin: -24px auto 40px;
+      width: min(960px, calc(100% - 32px));
+      margin: -24px auto 42px;
     }
 
     .card {
-      background: var(--white);
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 28px;
-      margin-bottom: 18px;
       box-shadow: 0 8px 24px rgba(18, 48, 35, 0.08);
+      margin-bottom: 18px;
+      padding: 30px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--primary-dark);
+      line-height: 1.3;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin: 0 0 8px;
     }
 
     h2 {
-      margin-top: 0;
-      color: var(--dark-green);
-      font-size: 23px;
+      border-bottom: 1px solid var(--border);
+      font-size: 22px;
+      margin: 0 0 16px;
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 20px 0 8px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul,
+    ol {
+      margin: 10px 0 16px;
+      padding-left: 24px;
     }
 
     li {
-      margin-bottom: 9px;
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--link);
+      font-weight: 600;
+      word-break: break-word;
+    }
+
+    .last-updated {
+      color: var(--muted);
+      font-size: 15px;
+      margin: 0;
     }
 
     .notice {
-      background: #fff8e8;
+      background: var(--notice-background);
       border-left: 5px solid var(--gold);
       border-radius: 8px;
-      color: #5d4713;
-      padding: 14px 16px;
-    }
-
-    label {
-      display: block;
-      margin: 16px 0 7px;
-      font-weight: bold;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #b8c7bf;
-      border-radius: 9px;
-      font: inherit;
-      outline: none;
-    }
-
-    input:focus,
-    textarea:focus {
-      border-color: var(--green);
-      box-shadow: 0 0 0 3px rgba(15, 107, 79, 0.14);
-    }
-
-    textarea {
-      height: 105px;
-      resize: vertical;
-    }
-
-    .check-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
+      color: var(--notice-text);
       margin-top: 18px;
+      padding: 15px 17px;
     }
 
-    .check-row input {
-      width: 18px;
-      height: 18px;
-      margin-top: 4px;
+    .table-wrap {
+      overflow-x: auto;
     }
 
-    .check-row label {
-      margin: 0;
-      font-weight: normal;
-    }
-
-    button {
+    table {
+      border-collapse: collapse;
+      margin-top: 14px;
+      min-width: 650px;
       width: 100%;
-      border: 0;
-      border-radius: 9px;
-      padding: 14px;
-      margin-top: 20px;
-      background: var(--green);
-      color: white;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
     }
 
-    button:hover {
-      background: var(--dark-green);
+    th,
+    td {
+      border: 1px solid var(--border);
+      padding: 13px;
+      text-align: left;
+      vertical-align: top;
     }
 
-    .message {
-      display: none;
-      margin-top: 16px;
-      padding: 14px;
-      border-radius: 9px;
-      background: #e5f6eb;
-      border: 1px solid #9ed6ae;
-      color: #157347;
+    th {
+      background: #edf6f1;
+      color: var(--primary-dark);
+      font-size: 15px;
     }
 
-    .support {
+    td {
+      font-size: 15px;
+    }
+
+    .footer {
       color: var(--muted);
       font-size: 14px;
-      margin-top: 18px;
-    }
-
-    footer {
-      padding: 6px 20px 30px;
+      padding: 4px 20px 36px;
       text-align: center;
-      color: var(--muted);
-      font-size: 14px;
     }
 
     @media (max-width: 600px) {
-      .card {
-        padding: 20px;
+      .header {
+        padding: 35px 18px 48px;
       }
 
-      .header h1 {
+      .brand {
         font-size: 29px;
+      }
+
+      .container {
+        width: min(100% - 24px, 960px);
+      }
+
+      .card {
+        border-radius: 13px;
+        padding: 21px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: 20px;
       }
     }
   </style>
 </head>
 
 <body>
-
   <header class="header">
-    <h1>Basant Bazaar</h1>
-    <p>Account and data deletion request</p>
+    <p class="brand">Basant Bazaar</p>
+    <p class="subtitle">Privacy Policy</p>
   </header>
 
   <main class="container">
 
     <section class="card">
-      <h2>Request account deletion</h2>
+      <h1>Privacy Policy</h1>
+
+      <p class="last-updated">
+        <strong>Last Updated:</strong> October 6, 2026
+      </p>
 
       <p>
-        You can request deletion of your Basant Bazaar account and associated
-        personal data by completing the form below.
+        Basant Bazaar ("Basant Bazaar", "we", "our", or "us") respects your
+        privacy. This Privacy Policy explains how we access, collect, use,
+        store, protect, and share information when you use the Basant Bazaar
+        mobile application and related services (collectively, the "App").
+      </p>
+
+      <p>
+        Basant Bazaar is a marketplace application intended to help users
+        browse, list, buy, sell, and manage Basant-related products and
+        accessories. By using the App, you acknowledge the practices described
+        in this Privacy Policy.
       </p>
 
       <div class="notice">
-        <strong>Important:</strong> After your account is deleted, you may lose
-        access to your profile, saved addresses, listings, order history, and
-        other account-related features.
+        <strong>Important:</strong> This Privacy Policy should match the
+        actual functionality and third-party SDKs included in the version of
+        the App published on Google Play. We may update this policy when our
+        App features or data practices change.
       </div>
     </section>
 
     <section class="card">
-      <h2>How to request deletion</h2>
+      <h2>1. Information We Collect</h2>
 
-      <ol>
-        <li>Enter the mobile number registered with your Basant Bazaar account.</li>
-        <li>Enter your full name and email address, if available.</li>
-        <li>Submit the account deletion request.</li>
-        <li>We may contact you to verify account ownership.</li>
-        <li>Requests are normally processed within 30 days after verification.</li>
-      </ol>
+      <h3>1.1 Account and profile information</h3>
+
+      <p>
+        When you create or use a Basant Bazaar account, we may collect:
+      </p>
+
+      <ul>
+        <li>Mobile phone number for account registration and OTP verification</li>
+        <li>Name and user profile details that you provide</li>
+        <li>User role, such as Buyer, Seller, or Manufacturer</li>
+        <li>Profile image, if you choose to upload one</li>
+        <li>Communication preferences and account settings</li>
+      </ul>
+
+      <h3>1.2 Seller and manufacturer information</h3>
+
+      <p>
+        If you register as a Seller or Manufacturer, we may collect additional
+        information needed to operate marketplace features, including:
+      </p>
+
+      <ul>
+        <li>Shop, business, or manufacturer name</li>
+        <li>Business address, city, and pickup or delivery details</li>
+        <li>CNIC information, where requested for identity or account verification</li>
+        <li>Licence or certificate information, if you choose to provide it</li>
+        <li>Product categories, listings, inventory details, and related business information</li>
+      </ul>
+
+      <h3>1.3 Orders and delivery information</h3>
+
+      <p>
+        When you browse, place, receive, sell, or manage an order, we may
+        collect or generate:
+      </p>
+
+      <ul>
+        <li>Product and order details</li>
+        <li>Delivery address and recipient information</li>
+        <li>Order status, transaction reference details, and fulfilment information</li>
+        <li>Messages or support requests you send through available App features</li>
+      </ul>
+
+      <h3>1.4 Photos and uploaded content</h3>
+
+      <p>
+        The App may allow users to upload product photos, profile images,
+        verification documents, or other content. We collect the files you
+        choose to upload in order to provide the requested marketplace,
+        profile, listing, and verification functions.
+      </p>
+
+      <h3>1.5 Device, diagnostics, and usage information</h3>
+
+      <p>
+        We may collect limited technical and usage information, including:
+      </p>
+
+      <ul>
+        <li>Device identifiers, app instance identifiers, or similar identifiers</li>
+        <li>Device model, operating system, app version, language, and settings</li>
+        <li>Crash logs, performance diagnostics, and security-related events</li>
+        <li>App interactions, screens viewed, features used, and session information</li>
+        <li>IP-address-derived approximate location or network information, where generated by service providers for security, analytics, or service operation</li>
+      </ul>
+
+      <h3>1.6 Camera and QR/barcode scanning</h3>
+
+      <p>
+        If you choose to use QR code or barcode scanning features, the App may
+        request access to your device camera. Camera access is used only to
+        scan codes when you start that feature. We do not use camera access
+        for unrelated purposes.
+      </p>
     </section>
 
     <section class="card">
-      <h2>Data deleted</h2>
+      <h2>2. How We Use Information</h2>
+
+      <p>We may use information collected through the App to:</p>
 
       <ul>
-        <li>Basant Bazaar account and profile information</li>
-        <li>Registered phone number, name, and contact information</li>
-        <li>Saved delivery addresses</li>
-        <li>Seller or manufacturer profile details, where applicable</li>
-        <li>Product listings and uploaded product images, where applicable</li>
-        <li>CNIC and licence details, where applicable</li>
+        <li>Create, authenticate, and manage user accounts through phone-number OTP verification</li>
+        <li>Provide marketplace functions, including listings, browsing, ordering, delivery, and profile features</li>
+        <li>Enable Seller and Manufacturer onboarding and verification-related features</li>
+        <li>Display product listings, shop information, and content that users choose to make available through the marketplace</li>
+        <li>Process and manage orders, customer support, disputes, and service requests</li>
+        <li>Prevent fraud, misuse, spam, security incidents, and unauthorised activity</li>
+        <li>Maintain, troubleshoot, improve, and secure the App</li>
+        <li>Analyse App performance and usage trends</li>
+        <li>Comply with legal obligations and enforce our terms and policies</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2>Data that may be retained</h2>
+      <h2>3. How Information Is Shared</h2>
 
       <p>
-        Limited order, transaction, security, fraud-prevention, dispute, and
-        legal-compliance records may be retained only where necessary.
+        We do not sell personal information. We may share or make information
+        available only as necessary to provide App functions, operate our
+        services, comply with the law, or protect users and the App.
+      </p>
+
+      <h3>3.1 Other marketplace users</h3>
+
+      <p>
+        Certain information is visible to other users when it is needed for
+        marketplace functionality. For example, a Seller's shop name, product
+        listings, product images, city, and business details may be visible to
+        Buyers. Delivery or order information may be shared with the relevant
+        Buyer, Seller, or Manufacturer to fulfil an order.
       </p>
 
       <p>
-        Such records are securely stored and are not used for marketing.
-        Account deletion requests are normally completed within 30 days after
-        account ownership verification.
+        We do not intentionally display sensitive identity information, such
+        as CNIC details or private verification documents, publicly to other
+        users.
+      </p>
+
+      <h3>3.2 Service providers</h3>
+
+      <p>
+        We use trusted service providers to help operate the App. Depending on
+        the services enabled in the released App version, these providers may
+        process information on our behalf:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Google Firebase</strong>, including Firebase Authentication,
+          Cloud Firestore, Firebase Storage, Firebase Cloud Messaging,
+          Firebase Analytics, Crashlytics, or related Firebase services, for
+          account authentication, database storage, file storage,
+          notifications, analytics, diagnostics, and App operation.
+        </li>
+        <li>
+          <strong>Google Play services</strong>, where applicable, for
+          distribution, security, performance, and related platform services.
+        </li>
+        <li>
+          Payment, delivery, communication, or verification providers only if
+          and when those services are enabled and required to fulfil the
+          requested feature or transaction.
+        </li>
+      </ul>
+
+      <p>
+        These providers may process information according to their own privacy
+        terms and policies. Firebase information is available at:
+        <a
+          href="https://firebase.google.com/support/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://firebase.google.com/support/privacy
+        </a>
+      </p>
+
+      <h3>3.3 Legal and safety reasons</h3>
+
+      <p>
+        We may disclose information if we reasonably believe it is necessary
+        to comply with applicable law, a valid legal request, prevent fraud or
+        abuse, protect the security of the App, or protect the rights, safety,
+        and property of Basant Bazaar, our users, or others.
       </p>
     </section>
 
     <section class="card">
-      <h2>Submit deletion request</h2>
+      <h2>4. Data Security</h2>
 
-      <form id="deleteForm">
-
-        <label for="name">Full name *</label>
-        <input
-          id="name"
-          type="text"
-          required
-          placeholder="Enter your full name"
-        >
-
-        <label for="phone">Registered mobile number *</label>
-        <input
-          id="phone"
-          type="tel"
-          required
-          placeholder="+92 3XX XXXXXXX"
-        >
-
-        <label for="email">Email address (optional)</label>
-        <input
-          id="email"
-          type="email"
-          placeholder="Enter your email address"
-        >
-
-        <label for="reason">Reason for deletion (optional)</label>
-
-        <textarea
-          id="reason"
-          placeholder="You may write your reason here"
-        ></textarea>
-
-        <div class="check-row">
-
-          <input
-            id="confirm"
-            type="checkbox"
-            required
-          >
-
-          <label for="confirm">
-            I confirm that I am requesting deletion of my Basant Bazaar account
-            and understand that my account-related data may be permanently deleted.
-          </label>
-
-        </div>
-
-        <button type="submit">
-          Submit deletion request
-        </button>
-
-        <div class="message" id="message">
-          Demo preview: Your request would be submitted here after Firebase is connected.
-        </div>
-
-      </form>
-
-      <p class="support">
-        If you cannot use this form, contact:
-        <strong>mobile.appdevu@gmail.com</strong>
+      <p>
+        We use reasonable administrative, technical, and organisational
+        safeguards designed to protect user information. Data transmitted
+        between the App and supported services is intended to use encrypted
+        connections, such as HTTPS/TLS.
       </p>
 
+      <p>
+        However, no internet transmission or storage system can be guaranteed
+        to be completely secure. You are responsible for keeping your device,
+        account access, and OTP verification code secure.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>5. Data Retention</h2>
+
+      <p>
+        We retain personal information only for as long as necessary to provide
+        the App, operate marketplace services, resolve disputes, enforce
+        agreements, prevent fraud, comply with legal obligations, and maintain
+        required business or security records.
+      </p>
+
+      <p>
+        For example, active account information may be retained while your
+        account remains active. Certain order, transaction, dispute,
+        fraud-prevention, security, or legally required records may be
+        retained after account deletion where necessary and permitted by
+        applicable law.
+      </p>
+
+      <p>
+        Uploaded product content may be removed when the related listing or
+        account is deleted, subject to technical backup cycles and any
+        retention required for legal, security, fraud-prevention, or dispute
+        purposes.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>6. Your Choices and Account Deletion</h2>
+
+      <p>
+        You may update certain profile details through the App. You can also
+        request deletion of your Basant Bazaar account and associated personal
+        data.
+      </p>
+
+      <p>
+        To request account deletion, use our public account deletion page:
+      </p>
+
+      <p>
+        <a
+          href="https://YOUR-FIREBASE-PROJECT-ID.web.app/delete-account"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://YOUR-FIREBASE-PROJECT-ID.web.app/delete-account
+        </a>
+      </p>
+
+      <p>
+        You may also contact us at
+        <a href="mailto:mobile.appdevu@gmail.com">mobile.appdevu@gmail.com</a>.
+        We may need to verify your identity before processing a deletion
+        request. We normally aim to process verified deletion requests within
+        30 days, unless a longer period is required for legal, security,
+        fraud-prevention, or dispute-resolution purposes.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>7. Children’s Privacy</h2>
+
+      <p>
+        Basant Bazaar is not designed for children. The App is intended for
+        users aged 18 and over. We do not knowingly collect personal
+        information from children. If you believe that a child has provided
+        personal information to us, please contact us so that we can take
+        appropriate action.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>8. International Processing</h2>
+
+      <p>
+        Our service providers, including cloud service providers, may process
+        or store information in locations outside your city, province, or
+        country. Where information is transferred, we take reasonable steps
+        designed to protect it in accordance with this Privacy Policy and
+        applicable law.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>9. Changes to This Privacy Policy</h2>
+
+      <p>
+        We may update this Privacy Policy from time to time to reflect changes
+        in our practices, App functionality, legal requirements, or security
+        measures. The updated version will be posted on this page with an
+        updated "Last Updated" date.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>10. Contact Us</h2>
+
+      <p>
+        If you have questions, concerns, or requests regarding privacy or this
+        Privacy Policy, contact us:
+      </p>
+
+      <p>
+        <strong>App/Developer:</strong> Basant Bazaar<br />
+        <strong>Email:</strong>
+        <a href="mailto:mobile.appdevu@gmail.com">
+          mobile.appdevu@gmail.com
+        </a>
+      </p>
     </section>
 
   </main>
 
-  <footer>
-    © 2026 Basant Bazaar · Privacy Policy
+  <footer class="footer">
+    © 2026 Basant Bazaar. All rights reserved.
   </footer>
-
-  <script>
-    const form = document.getElementById("deleteForm");
-    const message = document.getElementById("message");
-
-    form.addEventListener("submit", function (event) {
-
-      event.preventDefault();
-
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-
-      message.style.display = "block";
-
-      form.reset();
-
-    });
-  </script>
-
 </body>
 </html>
